@@ -1,0 +1,1371 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{box-sizing: border-box; font-family: 'Poppins', sans-serif;}
+html, body{margin: 0; padding: 0; -ms-overflow-style: none; scrollbar-width: none;}
+h1, h2, h3, h4, h5, h6, p{margin: 0;}
+ul, ol{margin: 0; padding: 0; list-style: none;}
+a{text-decoration: none;}
+
+body::-webkit-scrollbar{display: none;}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 3;
+    transition: transform 0.5s;
+}
+
+header.show{transform: translateY(0%);}
+
+header ul{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+header ul li{margin: 0 15px;}
+header ul li a{
+    display: block;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 40px;
+}
+
+header ul li.active a{color: #aaf;}
+
+/*  ------- HEADER 종료 */
+
+/* BOX 1 - HOME 시작 */
+
+/*main{}*/
+main .box{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-color: #222;
+    color: #aaf;
+}
+
+main .box #home{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+main .box #home .title:hover, main .box #home .title:active{
+    box-shadow: 0 0 10px #abf, 0 0 20px #abf, 0 0 10px #abf;
+    transition-delay: 1s;
+}
+
+main .box #home .title{
+    position: absolute;
+    font-size: 70px;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 0 0 2px #abf, 1px 1px 6px #abf;
+    padding: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+main .box #home .title span{
+    position: absolute;
+    display: block;
+}
+
+main .box #home .title span:nth-child(1){
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #abf);
+}
+
+main .box #home .title:hover span:nth-child(1){
+    left: 100%;
+    transition: left 1s;
+}
+
+
+main .box #home .title span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #abf);
+}
+
+main .box #home .title:hover span:nth-child(2){
+    top: 100%;
+    transition: top 1s;
+    transition-delay: 0.25s;
+}
+
+main .box #home .title span:nth-child(3){
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #abf);
+}
+
+main .box #home .title:hover span:nth-child(3){
+    right: 100%;
+    transition: right 1s;
+    transition-delay: 0.5s;
+}
+
+main .box #home .title span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(0deg, transparent, #abf);
+}
+
+main .box #home .title:hover span:nth-child(4){
+    bottom: 100%;
+    transition: bottom 1s;
+    transition-delay: 0.75s;
+}
+
+
+main .box:first-child .content{
+    /* background-color: #ddd; */
+    position: absolute;
+    width: 200px;
+    bottom: 10%;
+    right: 10%;
+    text-align: center;
+}
+
+
+main .box:first-child .content h3{
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+main .box:first-child .content p{
+    font-size: 16px;
+}
+
+main .box:first-child .content p:hover{
+    color: #abf;
+    cursor: pointer;
+}
+
+/*-------- <!-- box 1 (HOME)-->  종료 ----------*/
+
+/*-------- <!-- box 2 (ABOUT)-->  시작 ----------*/
+
+/* main .box #about{} */
+
+main .box #about .title{
+    position: absolute;
+    font-size: 36px;
+    top: 20%; left: 10%;
+    text-shadow: 0 0 2px #abf, 1px 1px 6px #abf;
+    cursor: pointer;
+}
+
+main .box #about .title:hover, main .box #about .title:active{
+    box-shadow: none;
+}
+
+main .box #about .title span{
+    position: absolute;
+    display: block;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #abf);
+}
+
+main .box #about .title:hover span{
+    left: 100%;
+    transition: left 1s;
+}
+
+main .box #about ul.info{
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    width: 50%;
+}
+
+main .box #about ul.info li{margin-bottom: 5px;}
+main .box #about ul.info li fieldset{padding: 5px;}
+/* main .box #about ul.info li fieldset legend{} */
+main .box #about ul.info li fieldset span p{color: #aaf}
+main .box #about ul.info li fieldset p{color: #bbb}
+
+/* ----- <!-- box 2 (ABOUT)-->  종료 ---------*/
+
+/* ----- <!-- box 3 (SKILLS)-->  시작 ---------*/
+
+main .box:nth-child(3) .title{
+    position: absolute;
+    font-size: 36px;
+    top: 20%; left: 10%;
+    text-shadow: 0 0 2px #abf, 1px 1px 6px #abf;
+    cursor: pointer;
+}
+
+main .box:nth-child(3) .title:hover, main .box:nth-child(3) .title:active{
+    box-shadow: none;
+}
+
+main .box:nth-child(3) .title span{
+    position: absolute;
+    display: block;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #abf);
+}
+
+main .box:nth-child(3) .title:hover span{
+    left: 100%;
+    transition: left 1s;
+}
+
+main .box #skills{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main .box #skills #circle_bar{
+    position: relative;
+    width: 200px;
+    cursor: pointer;
+}
+main .box #skills #circle_bar .frame{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+main .box #skills #circle_bar .frame .bx{
+    width: 240px;
+    height: 240px;
+    position: relative;
+    transition: transform 0.5s;
+}
+
+main .box #skills #circle_bar .frame .bx:hover{
+    transform: translateY(-7.5%);
+}
+
+main .box #skills #circle_bar .frame .bx .cont{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+main .box #skills #circle_bar .frame .bx .cont .top{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: inset 0 0 16px rgba(0, 0, 0, 0.5);
+}
+
+main .box #skills #circle_bar .frame .bx .cont .top .num{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+main .box #skills #circle_bar .frame .bx .cont .top .num h2{
+    font-size: 15px;
+    color: #777;
+    transition: color 0.5s;
+}
+
+main .box #skills #circle_bar .frame .bx:hover .cont .top .num h2{
+    color: #abf;
+}
+
+main .box #skills #circle_bar .frame .bx .cont .top .num h2 .count{
+    font-size: 24px;
+}
+
+/* --- */
+
+main .box #skills #circle_bar .frame .bx .cont .bottom{
+    padding-top: 10px;
+    color: #bbb;
+    text-align: center;
+    font-size: 15px;
+    transition: color 0.5s;
+}
+
+main .box #skills #circle_bar .frame .bx:hover .cont .bottom{
+    color: #abf;
+}
+
+/* --- */
+
+main .box #skills #circle_bar .frame .bx .cont .top svg{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    z-index: 8;
+}
+
+main .box #skills #circle_bar .frame .bx .cont .top svg circle{
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: rgba(0, 0, 0, 0.1);
+    stroke-width: 10;
+    transform: translate(5px, 5px);
+}
+
+main .box #skills #circle_bar .frame .bx .cont .top svg circle:last-child{
+    stroke-linecap: butt;
+
+    stroke-dasharray: 440; 
+    /* 원호를 구하기 2*PI*R = 2*70*3.14 = 439.6 ~= 440 */
+
+    stroke-dashoffset: 440;
+    stroke: #aaf;
+    transition: stroke-dashoffset 2s linear;
+}
+
+
+main .box .dark{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+    opacity: 0;
+}
+
+main .box .dark.active{
+    z-index: 1;
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+main .box .popup{
+    position: fixed;
+    width: 70%;
+    height: 80%;
+    top:50%;
+    left:50%;
+    background: rgba(0, 0, 0, 0.45);
+    border-radius: 4px;
+    box-shadow: 0 0 4px rgba(255,255,255,0.5);
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    opacity: 0;
+}
+
+main .box .popup.active{
+    z-index: 10;
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+main .box .popup .close{
+    position: absolute;
+    top:-40px;
+    right:-36px;
+    color:#fff;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+#accor_03{
+    padding: 20px 0;
+}
+
+#accor_03 ul{
+    width: 800px;
+    margin: 0 auto;
+}
+
+/* #accor_03 ul li{} */
+#accor_03 ul li .top{
+    height: 40px;
+    background-color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    border-bottom: 1px solid #aaf;
+    cursor: pointer;
+}
+
+#accor_03 ul li .top h4{
+    font-size: 16px;
+    color: #fff;
+}
+
+#accor_03 ul li .top span{
+    display: block;
+}
+
+#accor_03 ul li .top span img{
+    display: block;
+    height: 14px;
+    filter: invert(100%);
+}
+
+#accor_03 ul li .bottom{
+    display: none;
+    padding: 20px;
+    width: 800px;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+#accor_03 ul li .bottom img{
+    width: 100%;
+}
+
+
+
+/* ----- <!-- box 3 (SKILLS)-->  종료 ---------*/
+
+
+/* ----- <!-- box 4 (PROJECTS)-->  종료 ---------*/
+
+main .box:nth-child(4) .title{
+    position: absolute;
+    font-size: 36px;
+    top: 10%; left: 10%;
+    text-shadow: 0 0 2px #abf, 1px 1px 6px #abf;
+    cursor: pointer;
+}
+
+main .box:nth-child(4) .title:hover, main .box:nth-child(4) .title:active{
+    box-shadow: none;
+}
+
+main .box:nth-child(4) .title span{
+    position: absolute;
+    display: block;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #abf);
+}
+
+main .box:nth-child(4) .title:hover span{
+    left: 100%;
+    transition: left 1s;
+}
+
+main .box #projects{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+main .box #projects .cover{
+    width: 900%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -100%;
+}
+
+main .box #projects .cover #proj_box{
+    width: calc(100% / 9);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+main .box #projects .cover #proj_box .case{
+    width: 40%;
+    margin: 0 auto;
+    position: relative;
+    /* background-color: #aaf; */
+}
+
+main .box #projects .cover #proj_box .case img{
+    display: block;
+    width: 100%;
+}
+
+main .box #projects .cover #proj_box .case .incase{
+    position: absolute;
+    width: 75.19%;
+    height: 80.95%;
+    top: 4.76%;
+    left: 12.62%;
+    overflow: hidden;
+}
+
+main .box #projects .cover #proj_box .case .incase .portview{
+    width: 100%;
+    height: 100%;
+    /* background-image: url(../img/projects_01.png); */
+        /*nao colocar aqui - colocar variavel no jquery*/
+    background-size: 100% auto;
+    background-position: 50% 0;
+    transition: background-position 15s linear;
+}
+
+main .box #projects .cover #proj_box .case:hover .incase .portview{
+    background-position: 50% 100%;
+}
+
+
+main .box #projects .cover #proj_box .case .incase img{
+    display: block;
+    width: 100%;
+    transition: transform 20s;
+}
+
+main .box #projects .cover #proj_box .case:hover .incase img{
+    transform: translateY(-100%);
+}
+
+
+main .box #projects .cover #proj_box .txt{
+    text-align: center;
+    transform: translateY(400px);
+    margin-top: 40px;
+    opacity: 0;
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+main .box #projects .cover #proj_box.show .txt{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+main .box #projects .cover #proj_box .txt h2{
+    margin-bottom: 20px;
+    font-size: 26px;
+}
+
+main .box #projects .cover #proj_box .txt p{
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+main .box #projects .cover #proj_box .txt a{
+    color: #999;
+    font-size: 14px;
+    padding: 5px 10px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 4px;
+    transition: color 0.5s;
+}
+
+main .box #projects .cover #proj_box .txt a:hover{
+    color: #aaf;
+    border: 1px solid rgba(170, 170, 255, 0.5);
+}
+
+
+
+
+.prevBtn{
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    /* background-color: #555; */
+    transform: translate(-25vw, -50%);
+    cursor: pointer;
+}
+
+.prevBtn:before{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+    transform-origin: 0 50%;
+    transition: transform 1s;
+}
+
+.prevBtn:after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+    transform-origin: 0 50%;
+    transition: transform 1s;
+}
+
+.prevBtn:hover:before{
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.prevBtn:hover:after{
+    transform: translateY(-50%) rotate(-45deg);
+}
+
+.prevBtn span{
+    position: absolute;
+    display: block;
+    top: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 15px;
+    text-align: center;
+    padding-right: 20px;
+    transition: transform 1s, right 1s, opacity 1s;
+}
+
+.prevBtn:hover span{
+    transform: translate(50%, -50%);
+    right: 0;
+    opacity: 0;
+}
+
+
+.nextBtn{
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 50%;
+    right: 45%;
+    /* background-color: #555; */
+    transform: translate(25vw, -50%);
+    cursor: pointer;
+}
+
+
+.nextBtn:before{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+    transform-origin: 100% 50%;
+    transition: transform 1s;
+}
+
+.nextBtn:after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+    transform-origin: 100% 50%;
+    transition: transform 1s;
+}
+
+.nextBtn:hover:before{
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.nextBtn:hover:after{
+    transform: translateY(-50%) rotate(-45deg);
+}
+
+
+.nextBtn span{
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(50%, -50%);
+    color: #fff;
+    font-size: 15px;
+    text-align: center;
+    padding-left: 20px;
+    transition: transform 1s, left 1s, opacity 1s;
+}
+
+.nextBtn:hover span{
+    transform: translate(-50%, -50%);
+    left: 0;
+    opacity: 0;
+}
+
+
+/* ----- <!-- box 4 (PROJECTS)-->  종료 ---------*/
+
+
+/* ----- <!-- box 5 (CONTACT ME)-->  시작 ---------*/
+
+/* main .box:nth-child(5){}
+main .box:nth-child(5) > ul{}
+main .box:nth-child(5) > ul > li{} */
+
+main .box:nth-child(5) ul .waiting{
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+} 
+
+main .box:nth-child(5) ul .waiting.active{
+    display: none;
+}
+
+
+main .box:nth-child(5) .waiting span{
+    border: 0;
+    margin: 0;
+    width: 40%;
+    height: 40%;
+    position: absolute;
+    border-radius: 50%;
+    animation: spin 2s ease infinite;
+    transition: all 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+main .box:nth-child(5) .waiting span:first-child{
+    background: #aaf;
+    animation-delay: -1.5s;
+}
+
+main .box:nth-child(5) .waiting span:nth-child(2){
+    background: #abf;
+    animation-delay: -1s;
+}
+
+main .box:nth-child(5) .waiting span:nth-child(3){
+    background: #acf;
+    animation-delay: -0.5s;
+}
+
+main .box:nth-child(5) .waiting span:nth-child(4){
+    background: #aaf;
+}
+
+@keyframes spin{
+    0%{transform: translate(0) scale(0);}
+    25%{transform: translate(200%) scale(1.5);}
+    50%{transform: translate(200%, 200%) scale(0);}
+    75%{transform: translate(0, 200%) scale(1.5);}
+    100%{transform: translate(0) scale(0);}
+}
+
+/* ---- */
+
+main .box:nth-child(5) .sendMe{display: none;}
+main .box:nth-child(5) .sendMe.active{display: block;}
+
+main .box:nth-child(5) .sendMe .title{
+    position: absolute;
+    font-size: 36px;
+    top: 20%; left: 10%;
+    text-shadow: 0 0 2px #abf, 1px 1px 6px #abf;
+    cursor: pointer;
+}
+
+main .box:nth-child(5) .sendMe .title:hover, main .box:nth-child(3) .title:active{
+    box-shadow: none;
+}
+
+main .box:nth-child(5) .sendMe .title span{
+    position: absolute;
+    display: block;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #abf);
+}
+
+main .box:nth-child(5) .sendMe .title:hover span{
+    left: 100%;
+    transition: left 1s;
+}
+
+
+.box .sendMe #contact{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-20%, -40%);
+    max-width: 800px;
+    min-width: 340px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px 10px;
+}
+
+.box .sendMe #contact fieldset{
+    border: 1px solid #777;
+    border-radius: 4px;
+}
+
+.box .sendMe #contact fieldset legend{
+    padding: 0 20px;
+    font-size: 20px;
+    color: #aaf;
+    font-weight: bold;
+}
+.box .sendMe #contact fieldset .formlist{ padding: 10px;}
+.box .sendMe #contact fieldset .formlist ul{ padding-bottom: 10px;}
+.box .sendMe #contact fieldset .formlist ul li{
+    display: flex;
+    padding: 10px 0;
+}
+.box .sendMe #contact fieldset .formlist ul li label{
+    width: 140px;
+    font-size: 16px;
+    font-weight: bold;
+    word-break: keep-all;
+    line-height: 40px;
+    color: #999;
+}
+.box .sendMe #contact fieldset .formlist ul li label sup{ color: #ff6a6a;}
+.box .sendMe #contact fieldset .formlist ul li .inputbox{ width: calc(100% - 140px); display: block;}
+.box .sendMe #contact fieldset .formlist ul li .inputbox input{
+    display: block;
+    width: 100%;
+    line-height: 40px;
+    font-size: 16px;
+    color: #555;
+    padding: 0 10px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    outline-color: #aaf;
+    border-radius: 8px;
+}
+.box .sendMe #contact fieldset .formlist ul li .inputbox textarea{
+    display: block;
+    width: 100%; height: 320px;
+    border: 1px solid #ccc;
+    resize: none;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #555;
+    line-height: 1.2;
+    padding: 12px 10px;
+    outline-color: #aaf;
+}
+.box .sendMe #contact fieldset .formlist .btn_box{ 
+    padding: 20px 0 0;
+    border-top: 1px solid #999;
+    text-align: right;
+}
+.box .sendMe #contact fieldset .formlist .btn_box button{
+    font-size: 17px;
+    background-color: #abf;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 10px 20px;
+    transition: background-color 0.5s;
+}
+.box .sendMe #contact fieldset .formlist .btn_box button:hover{
+    background-color: #aaf;
+
+}
+
+.thankyou_message{
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+.thankyou_message article{
+    position: absolute;
+    max-width: 500px;
+    min-width: 300px;
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 20px;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
+.thankyou_message article h1{
+    color: #555;
+    font-size: 22px;
+    padding-bottom: 20px;
+    word-break: keep-all;
+}
+.thankyou_message article p{
+    font-size: 17px;
+    color: #777;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+}
+.thankyou_message article .btn_box{
+    padding-top: 20px;
+    text-align: right;
+}
+.thankyou_message article .btn_box a{
+    display: inline-block;
+    padding: 6px 12px;
+    background-color: #abf;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 17px;
+}
+.thankyou_message article .btn_box a:hover{
+    background-color: #aaf;
+}
+.comment{
+    font-size: 14px;
+    color: #acf;
+    display: block;
+    padding-top: 10px;
+}
+
+
+@media (max-width:1400px){
+    main .box #about .title{
+        position: relative;
+        width: 100%;
+        top: 10%;
+        font-size: 24px;
+    }
+
+    main .box #about .title span{
+        background: transparent;
+    }
+
+    main .box #about{width: 100%; height: 100vh;}
+
+    main .box #about ul.info{
+        position: relative;
+        left: 0;
+        top: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 80%;
+        margin: 0 auto;
+        height: 100vh;
+        padding-top: 50px;
+    }
+
+    main .box #about ul.info li{width: 100%;}
+
+    main .box #about ul.info li fieldset{
+        width: 100%;
+    }
+
+    /* ----skills : */
+
+    main .box:nth-child(3) .title{
+        position: relative;
+        width: 100%;
+        top: 10%;
+        font-size: 24px;
+    }
+
+    main .box:nth-child(3) .title span{
+        background: transparent;
+    }
+
+    main .box #skills{
+        position: relative;
+        width: 80%;
+        height: 80%;
+        flex-wrap: wrap;
+        left: 10%;
+    }
+
+    main .box #skills #circle_bar{
+        width: 30%;
+        top: 20%;
+    }
+
+    /* ----projects : */
+
+    main .box:nth-child(4) .title{
+        position: relative;
+        width: 100%;
+        top: 10%;
+        font-size: 24px;
+    }
+
+    main .box:nth-child(4) .title span{
+        background: transparent;
+    }
+
+
+    main .box #projects .cover #proj_box .case{
+        width: 65%;
+    }
+
+    .prevBtn{
+        top: 80%;
+        left: 40%;
+    }
+
+    .nextBtn{
+        top: 80%;
+        right: 40%;
+    }
+    
+
+    /* ----contact me : */
+    main .box:nth-child(6) .sendMe .title{
+        width: 100%;
+        top: 10%;
+        font-size: 24px;
+    }
+
+    main .box:nth-child(6) .sendMe .title span{
+        background: transparent;
+    }
+
+    .box .sendMe #contact{
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 60%;
+        transform: translate(20%, 20%);
+    }
+
+    .box .sendMe #contact fieldset .formlist ul li .inputbox textarea{
+        height: 280px;
+    }
+}
+
+@media (max-width:991px){
+
+    /* ----skills : */
+
+    main .box #skills{
+        left: 10%;
+    }
+
+    main .box #skills #circle_bar{
+        width: 30%;
+        top: 20%;
+    }
+
+    main .box .popup{
+        width: 80%;
+        height: 80%;
+    }
+
+    #accor_03 ul{
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    #accor_03 ul li .bottom{
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+
+    .prevBtn{
+        left: 40%;
+        margin-top: 40px;
+    }
+
+    .nextBtn{
+        right: 40%;
+        margin-top: 40px;
+    }
+    
+    /* ----projects : */
+
+    main .box #projects .cover #proj_box .case{
+        width: 80%;
+    }
+
+    /* ----contact me : */
+    .box .sendMe #contact{
+        width: 70%;
+        transform: translate(10%, 25%);
+    }
+
+    .box .sendMe #contact fieldset .formlist ul li .inputbox input{
+        font-size: 14px;
+    }
+
+    .box .sendMe #contact fieldset .formlist ul li .inputbox textarea{
+        font-size: 14px;
+    }
+
+    .box .sendMe #contact fieldset .formlist ul li .inputbox textarea{
+        height: 240px;
+    }
+}
+
+
+@media (max-width:767px){
+    /* about : */
+    main .box #about ul.info li{margin-bottom: 0;}
+    main .box #about ul.info li fieldset{padding: 3px;}
+
+    /* ----skills : */
+
+    main .box #skills{
+        left: 10%;
+    }
+
+    main .box #skills #circle_bar{
+        width: 40%;
+        top: 10%;
+    }
+
+    
+
+    .prevBtn{
+        left: 60%;
+        margin-top: 40px;
+    }
+
+    .nextBtn{
+        right: 60%;
+        margin-top: 40px;
+    }
+
+    /* ----projects : */
+
+    main .box #projects .cover #proj_box .case{
+        width: 90%;
+    }
+
+        
+    main .box #projects .cover #proj_box .txt h2{
+        margin-bottom: 30px;
+        font-size: 18px;
+    }
+
+    main .box #projects .cover #proj_box .txt p{
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    main .box #projects .cover #proj_box .txt a{
+        font-size: 14px;
+        padding: 5px 5px;
+    }
+
+    .prevBtn{
+        width: 30px;
+        height: 30px;
+        top: 80%;
+        left: 50%;
+    }
+
+    .prevBtn span{
+        font-size: 14px;
+        padding-right: 10px;
+    }
+
+    .nextBtn{
+        width: 30px;
+        height: 30px;
+        top: 80%;
+        right: 50%;
+    }
+
+    .nextBtn span{
+        font-size: 14px;
+        padding-left: 10px;
+    }
+
+    
+    /* ----contact me : */
+    .box .sendMe #contact{
+        width: 80%;
+        transform: translate(0, 30%);
+    }
+
+    
+    .box .sendMe #contact fieldset .formlist ul li .inputbox textarea{
+        height: 200px;
+    }
+    
+}
+
+@media (max-width:575px){
+
+    main .box #home .title{
+        position: absolute;
+        font-size: 26px;
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+        text-shadow: 0 0 2px #abf, 1px 1px 6px #abf;
+        padding: 10px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+
+    main .box:first-child .content{
+        /* background-color: #ddd; */
+        position: absolute;
+        width: 100px;
+        bottom: 10%;
+        right: 10%;
+        text-align: center;
+    }
+    
+    
+    main .box:first-child .content h3{
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+    
+    main .box:first-child .content p{
+        font-size: 14px;
+    }
+
+
+    /* ----skills : */
+
+     main .box #skills{
+        left: 0;
+        width: 100%;
+    }
+
+   
+
+    main .box #skills #circle_bar{
+        top: 20%;
+    }
+
+    main .box #skills #circle_bar .frame .bx{
+        justify-content: space-around;
+        width: 50%;
+    }
+
+    main .box #skills #circle_bar .frame .bx .cont .top .num h2{
+        font-size: 14px;
+        
+    }
+    
+    main .box #skills #circle_bar .frame .bx .cont .top .num h2 .count{
+        font-size: 14px;
+    }
+
+    main .box #skills #circle_bar .frame .bx .cont .bottom{font-size: 10px; font-weight: normal;}
+
+    /* ----projects : */
+    main .box:nth-child(4) .title{
+        top: 15%;
+        left: 37%;
+    }
+
+    main .box #projects .cover #proj_box .case{
+        width: 100%;
+    }
+
+        
+    main .box #projects .cover #proj_box .txt h2{
+        margin-bottom: 30px;
+        font-size: 16px;
+    }
+
+    main .box #projects .cover #proj_box .txt p{
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    main .box #projects .cover #proj_box .txt a{
+        font-size: 14px;
+        padding: 3px 3px;
+    }
+
+    .prevBtn{
+        width: 40px;
+        height: 40px;
+        top: 80%;
+        left: 40%;
+    }
+
+    .prevBtn span{
+        font-size: 12px;
+    }
+
+    .nextBtn{
+        width: 40px;
+        height: 40px;
+        top: 80%;
+        right: 40%;
+    }
+
+    .nextBtn span{
+        font-size: 12px;
+    }
+    
+
+    /* Contact Me */
+
+    main .box:nth-child(6) .sendMe .title{
+        transform: translate(25%, 100%);
+    }
+ 
+    .box .sendMe #contact{
+        transform: translate(0, 50%);
+    }
+
+    .box .sendMe #contact fieldset .formlist ul li{
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .box .sendMe #contact fieldset .formlist ul li .inputbox{
+        width: 100%;
+    }
+
+    .box .sendMe #contact fieldset .formlist ul li .inputbox textarea{
+       height: 50%;
+    }
+
+    .box .sendMe #contact fieldset .formlist .btn_box{
+        text-align: center;
+    }
+
+    .box .sendMe #contact fieldset .formlist .btn_box button{
+        font-size: 16px;
+        padding: 5px 10px;
+        width: 100%;
+    }
+
+}
